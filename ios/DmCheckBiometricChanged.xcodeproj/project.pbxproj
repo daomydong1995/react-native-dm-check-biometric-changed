@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* DmCheckBiometricChanged.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* DmCheckBiometricChanged.m */; };
-		F4FF95D7245B92E800C19C63 /*  DmCheckBiometricChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  DmCheckBiometricChanged.swift */; };
+		579FC30A29DFFD0E00049E27 /* LAContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC30929DFFD0E00049E27 /* LAContext.swift */; };
+		F4FF95D7245B92E800C19C63 /* DmCheckBiometricChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* DmCheckBiometricChanged.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libDmCheckBiometricChanged.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDmCheckBiometricChanged.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		579FC30929DFFD0E00049E27 /* LAContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAContext.swift; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* DmCheckBiometricChanged.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmCheckBiometricChanged.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* DmCheckBiometricChanged-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DmCheckBiometricChanged-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* DmCheckBiometricChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DmCheckBiometricChanged.swift; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				579FC30929DFFD0E00049E27 /* LAContext.swift */,
 				F4FF95D6245B92E800C19C63 /* DmCheckBiometricChanged.swift */,
 				B3E7B5891CC2AC0600A0062D /* DmCheckBiometricChanged.m */,
 				F4FF95D5245B92E700C19C63 /* DmCheckBiometricChanged-Bridging-Header.h */,
@@ -116,8 +118,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579FC30A29DFFD0E00049E27 /* LAContext.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* DmCheckBiometricChanged.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* DmCheckBiometricChanged.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

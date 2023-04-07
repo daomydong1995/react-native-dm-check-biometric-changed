@@ -17,6 +17,53 @@ const DmCheckBiometricChanged = NativeModules.DmCheckBiometricChanged
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return DmCheckBiometricChanged.multiply(a, b);
+const CheckBiometricChanged = NativeModules.CheckBiometricChanged
+  ? NativeModules.CheckBiometricChanged
+  : new Proxy(
+      {},
+      {
+        get() {
+          throw new Error(LINKING_ERROR);
+        },
+      }
+    );
+
+
+export function biometricsChanged(): Promise<boolean> {
+  return new Promise((resolve, reject) => {
+    CheckBiometricChanged.biometricsChanged()
+      .then((response: any) => {
+        if (response == true) resolve(true);
+        else resolve(false);
+      })
+      .catch((error: any) => {
+        reject(`${error}`);
+      });
+  });
+}
+
+export function verifyBiometric(): Promise<boolean> {
+  return new Promise((resolve, reject) => {
+    CheckBiometricChanged.verifyBiometric()
+      .then((response: any) => {
+        if (response == true) resolve(true);
+        else resolve(false);
+      })
+      .catch((error: any) => {
+        reject(`${error}`);
+      });
+  });
+}
+
+export function refreshTracker(): Promise<boolean> {
+  return new Promise((resolve, reject) => {
+    CheckBiometricChanged.refreshTracker()
+      .then((response: any) => {
+        if (response == true) resolve(true);
+        else resolve(false);
+      })
+      .catch((error: any) => {
+        reject(`${error}`);
+      });
+  });
 }
