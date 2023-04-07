@@ -1,5 +1,5 @@
 {
-  "name": "react-native-dm-check-biometric-changed",
+  "name": "@daomydong1995/react-native-dm-check-biometric-changed",
   "version": "0.1.0",
   "description": "test",
   "main": "lib/commonjs/index",
@@ -41,7 +41,10 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/daomydong1995/react-native-dm-check-biometric-changed",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daomydong1995/react-native-dm-check-biometric-changed.git"
+  },
   "author": "Đông Đào Mỹ <daomydong1995@gmail.com> (https://github.com/daomydong1995)",
   "license": "MIT",
   "bugs": {
@@ -156,5 +159,8 @@
         }
       ]
     ]
+  },
+  "directories": {
+    "example": "example"
   }
 }
