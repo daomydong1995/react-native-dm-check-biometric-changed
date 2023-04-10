@@ -6,7 +6,7 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const DmCheckBiometricChanged = NativeModules.DmCheckBiometricChanged
+const CheckBiometricChanged = NativeModules.DmCheckBiometricChanged
   ? NativeModules.DmCheckBiometricChanged
   : new Proxy(
       {},
@@ -17,23 +17,11 @@ const DmCheckBiometricChanged = NativeModules.DmCheckBiometricChanged
       }
     );
 
-const CheckBiometricChanged = NativeModules.CheckBiometricChanged
-  ? NativeModules.CheckBiometricChanged
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
-
-
 export function biometricsChanged(): Promise<boolean> {
   return new Promise((resolve, reject) => {
     CheckBiometricChanged.biometricsChanged()
       .then((response: any) => {
-        if (response == true) resolve(true);
+        if (response === true) resolve(true);
         else resolve(false);
       })
       .catch((error: any) => {
@@ -46,7 +34,7 @@ export function verifyBiometric(): Promise<boolean> {
   return new Promise((resolve, reject) => {
     CheckBiometricChanged.verifyBiometric()
       .then((response: any) => {
-        if (response == true) resolve(true);
+        if (response === true) resolve(true);
         else resolve(false);
       })
       .catch((error: any) => {
@@ -59,7 +47,7 @@ export function refreshTracker(): Promise<boolean> {
   return new Promise((resolve, reject) => {
     CheckBiometricChanged.refreshTracker()
       .then((response: any) => {
-        if (response == true) resolve(true);
+        if (response === true) resolve(true);
         else resolve(false);
       })
       .catch((error: any) => {

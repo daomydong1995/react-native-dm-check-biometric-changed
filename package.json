@@ -52,7 +52,8 @@
   },
   "homepage": "https://github.com/daomydong1995/react-native-dm-check-biometric-changed#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "cache": "~/.npm"
   },
   "devDependencies": {
     "@evilmartians/lefthook": "^1.2.2",
